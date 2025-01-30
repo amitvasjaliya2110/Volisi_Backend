@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="volisi-api-develop">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/volisi-api-develop.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

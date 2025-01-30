@@ -1,0 +1,5687 @@
+{
+	"info": {
+		"_postman_id": "8c4ecf94-1a46-4eb3-90b1-509547c01758",
+		"name": "Volisi Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35956540"
+	},
+	"item": [
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get Player byId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/player/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"player",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Player byId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/player/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"player",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 06:18:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Player found successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Jack\",\n        \"ranking\": 0,\n        \"finalScore\": 0,\n        \"questionsAnswered\": false,\n        \"quiz\": {\n            \"id\": 1,\n            \"name\": \"Java Quiz\",\n            \"description\": \"A quiz about Java fundamentals.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"English\",\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"General Knowledge Quiz\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"user_john\",\n                \"email\": \"john@example.com\",\n                \"password\": \"P@ssw0rd1\",\n                \"active\": true\n            },\n            \"deleted\": false\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/player",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Player",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/player",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"player"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 06:17:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Player found successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Jack\",\n            \"ranking\": 0,\n            \"finalScore\": 0,\n            \"questionsAnswered\": false,\n            \"quiz\": {\n                \"id\": 1,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"password\": \"P@ssw0rd1\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            }\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add Player",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quiz\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"name\": \"Kevin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/player",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Jack\",\r\n    \"quiz\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/player",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"player"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 09 Apr 2024 10:03:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Player saved successfully\",\n    \"data\": {\n        \"name\": \"Jack\",\n        \"ranking\": 0,\n        \"finalScore\": 0,\n        \"questionsAnswered\": false,\n        \"quiz\": {\n            \"id\": 1,\n            \"deleted\": false\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update Player",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 1,\r\n    \"name\": \"John\",\r\n    \"quiz\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/player",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"player"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Player",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\" : 1,\r\n    \"name\": \"John\",\r\n    \"quiz\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/player",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"player"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 19 Apr 2024 09:01:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Player updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"John\",\n        \"ranking\": 0,\n        \"finalScore\": 0,\n        \"questionsAnswered\": false,\n        \"quiz\": {\n            \"id\": 1,\n            \"deleted\": false\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete Player byId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/player/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"player",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/player/4",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"player",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 13:16:46 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Player deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Collection",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get Collection byId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/collection",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Collection byId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/collection/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 07:12:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection found successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Java\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Collection",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/collection",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Collection",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/collection",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 07:11:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection found successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Java\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By UserId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTcwNzY0MjksImV4cCI6MTcxNzA3NjYwOX0.Emw9AzIJW43YcGOjxeYGqcrv2W5WIYtLUxMF4Dc7GIw",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{host}}/collection/user/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTY5ODMzMjgsImV4cCI6MTcxNjk4MzUwOH0.0KdxJ-WqIJ71UqrPIbW2Lsfm__aWdqhqsnBkGbtawlE"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/collection/user/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection",
+												"user",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 May 2024 11:49:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection found successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"ASP\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"BCA\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Java\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"SQL\",\r\n    \"user\": {\r\n        \"id\": 3\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/collection",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTcwNDQwMjgsImV4cCI6MTcxNzA0NDIwOH0.2drPkkkCloU3nj_1hFDwxzFD3Odqg4z877SyK1y4NWs"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"SQL\",\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/collection",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 30 May 2024 04:42:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection saved successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"SQL\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update Collection",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 1,\r\n    \"name\" : \"DataBase\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/collection",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Collection",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\" : 1,\r\n    \"name\" : \"DataBase\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/collection",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 16 Apr 2024 06:12:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"DataBase\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete Collection byId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/collection/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"collection",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Collection byId",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/collection/2",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"collection",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 10 May 2024 08:39:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Collection deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Quiz Question & Answer",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/quiz-question",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz-question"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get all data",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz-question",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz-question"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 05:14:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz Question and Answer found successfully\",\n    \"data\": [\n        {\n            \"question\": \"Which of the following is a primitive data type in Java?\",\n            \"type\": {\n                \"id\": 1\n            },\n            \"userQuiz\": {\n                \"id\": 1,\n                \"players\": 10,\n                \"time\": 2023,\n                \"code\": 123456,\n                \"performancePercentage\": 50\n            },\n            \"isCorrect\": false,\n            \"noAnswer\": false,\n            \"points\": 0,\n            \"timeTaken\": 10,\n            \"userQuizAnswers\": [\n                {\n                    \"questionOption\": \"int\",\n                    \"selectedOption\": 1,\n                    \"optionSequence\": 1\n                },\n                {\n                    \"questionOption\": \"String\",\n                    \"selectedOption\": 2,\n                    \"optionSequence\": 2\n                },\n                {\n                    \"questionOption\": \"ArrayList\",\n                    \"selectedOption\": 3,\n                    \"optionSequence\": 3\n                },\n                {\n                    \"questionOption\": \"boolean\",\n                    \"selectedOption\": 4,\n                    \"optionSequence\": 4\n                }\n            ]\n        },\n        {\n            \"question\": \"Which of the following is a primitive data type in Java?\",\n            \"type\": {\n                \"id\": 2\n            },\n            \"userQuiz\": {\n                \"id\": 2,\n                \"players\": 10,\n                \"time\": 2023,\n                \"code\": 123456,\n                \"performancePercentage\": 50\n            },\n            \"isCorrect\": false,\n            \"noAnswer\": false,\n            \"points\": 0,\n            \"timeTaken\": 10,\n            \"userQuizAnswers\": [\n                {\n                    \"questionOption\": \"int\",\n                    \"selectedOption\": 1,\n                    \"optionSequence\": 1\n                },\n                {\n                    \"questionOption\": \"String\",\n                    \"selectedOption\": 2,\n                    \"optionSequence\": 2\n                },\n                {\n                    \"questionOption\": \"ArrayList\",\n                    \"selectedOption\": 3,\n                    \"optionSequence\": 3\n                },\n                {\n                    \"questionOption\": \"boolean\",\n                    \"selectedOption\": 4,\n                    \"optionSequence\": 4\n                }\n            ]\n        },\n        {\n            \"question\": \"Data type in java?\",\n            \"type\": {\n                \"id\": 123\n            },\n            \"userQuiz\": {\n                \"id\": 123,\n                \"players\": 10,\n                \"time\": 2023,\n                \"code\": 123456,\n                \"performancePercentage\": 50\n            },\n            \"isCorrect\": false,\n            \"noAnswer\": false,\n            \"points\": 0,\n            \"timeTaken\": 10,\n            \"userQuizAnswers\": [\n                {\n                    \"questionOption\": \"int\",\n                    \"selectedOption\": 1,\n                    \"optionSequence\": 1\n                },\n                {\n                    \"questionOption\": \"String\",\n                    \"selectedOption\": 2,\n                    \"optionSequence\": 2\n                },\n                {\n                    \"questionOption\": \"ArrayList\",\n                    \"selectedOption\": 3,\n                    \"optionSequence\": 3\n                },\n                {\n                    \"questionOption\": \"boolean\",\n                    \"selectedOption\": 4,\n                    \"optionSequence\": 4\n                }\n            ]\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz-question/7",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz-question",
+												"7"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 05:17:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz Question and Answer found successfully\",\n    \"data\": {\n        \"question\": \"Which of the following is a primitive data type in Java?\",\n        \"type\": {\n            \"id\": 1\n        },\n        \"userQuiz\": {\n            \"id\": 1,\n            \"players\": 10,\n            \"time\": 2023,\n            \"code\": 123456,\n            \"performancePercentage\": 50\n        },\n        \"isCorrect\": false,\n        \"noAnswer\": false,\n        \"points\": 0,\n        \"timeTaken\": 10,\n        \"userQuizAnswers\": [\n            {\n                \"questionOption\": \"int\",\n                \"selectedOption\": 1,\n                \"optionSequence\": 1\n            },\n            {\n                \"questionOption\": \"String\",\n                \"selectedOption\": 2,\n                \"optionSequence\": 2\n            },\n            {\n                \"questionOption\": \"ArrayList\",\n                \"selectedOption\": 3,\n                \"optionSequence\": 3\n            },\n            {\n                \"questionOption\": \"boolean\",\n                \"selectedOption\": 4,\n                \"optionSequence\": 4\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"question\": \"Data type in java?\",\r\n  \"type\": {\r\n    \"id\": 1\r\n  },\r\n  \"userQuiz\": {\r\n    \"id\": 1\r\n  },\r\n  \"timeTaken\": 10,\r\n  \"userQuizAnswers\": [\r\n    {\r\n      \"questionOption\": \"int\",\r\n      \"selectedOption\": 1,\r\n      \"optionSequence\": 1\r\n    },\r\n    {\r\n      \"questionOption\": \"String\",\r\n      \"selectedOption\": 2,\r\n      \"optionSequence\": 2\r\n    },\r\n    {\r\n      \"questionOption\": \"ArrayList\",\r\n      \"selectedOption\": 3,\r\n      \"optionSequence\": 3\r\n    },\r\n    {\r\n      \"questionOption\": \"boolean\",\r\n      \"selectedOption\": 4,\r\n      \"optionSequence\": 4\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/quiz-question",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz-question"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"question\": \"Data type in java?\",\r\n  \"type\": {\r\n    \"id\": 1\r\n  },\r\n  \"userQuiz\": {\r\n    \"id\": 1\r\n  },\r\n  \"timeTaken\": 10,\r\n  \"userQuizAnswers\": [\r\n    {\r\n      \"questionOption\": \"int\",\r\n      \"selectedOption\": 1,\r\n      \"optionSequence\": 1\r\n    },\r\n    {\r\n      \"questionOption\": \"String\",\r\n      \"selectedOption\": 2,\r\n      \"optionSequence\": 2\r\n    },\r\n    {\r\n      \"questionOption\": \"ArrayList\",\r\n      \"selectedOption\": 3,\r\n      \"optionSequence\": 3\r\n    },\r\n    {\r\n      \"questionOption\": \"boolean\",\r\n      \"selectedOption\": 4,\r\n      \"optionSequence\": 4\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user/quiz-question",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz-question"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 09 Apr 2024 13:13:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz Question and Answer saved successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "update status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4,\r\n  \"question\": \"primitive Data type in java?\",\r\n  \"points\":50,\r\n  \"correct\":true,\r\n  \"type\": {\r\n    \"id\": 1\r\n  },\r\n  \"userQuiz\": {\r\n    \"id\": 1\r\n  },\r\n  \"timeTaken\": 10,\r\n  \"userQuizAnswers\": [\r\n    {\r\n        \"id\":9,\r\n      \"questionOption\": \"int\",\r\n      \"selectedOption\": 1,\r\n      \"optionSequence\": 1\r\n    },\r\n    {\r\n        \"id\":10,\r\n      \"questionOption\": \"string\",\r\n      \"selectedOption\": 2,\r\n      \"optionSequence\": 2\r\n    },\r\n    {\r\n        \"id\":11,\r\n      \"questionOption\": \"boolean\",\r\n      \"selectedOption\": 3,\r\n      \"optionSequence\": 3\r\n    },\r\n    {\r\n        \"id\":12,\r\n      \"questionOption\": \"All\",\r\n      \"selectedOption\": 4,\r\n      \"optionSequence\": 4\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/quiz-question",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz-question"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update status",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":4,\r\n  \"question\": \"primitive Data type in java?\",\r\n  \"points\":50,\r\n  \"correct\":true,\r\n  \"type\": {\r\n    \"id\": 1\r\n  },\r\n  \"userQuiz\": {\r\n    \"id\": 1\r\n  },\r\n  \"timeTaken\": 10,\r\n  \"userQuizAnswers\": [\r\n    {\r\n        \"id\":9,\r\n      \"questionOption\": \"int\",\r\n      \"selectedOption\": 1,\r\n      \"optionSequence\": 1\r\n    },\r\n    {\r\n        \"id\":10,\r\n      \"questionOption\": \"string\",\r\n      \"selectedOption\": 2,\r\n      \"optionSequence\": 2\r\n    },\r\n    {\r\n        \"id\":11,\r\n      \"questionOption\": \"boolean\",\r\n      \"selectedOption\": 3,\r\n      \"optionSequence\": 3\r\n    },\r\n    {\r\n        \"id\":12,\r\n      \"questionOption\": \"All\",\r\n      \"selectedOption\": 4,\r\n      \"optionSequence\": 4\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user/quiz-question",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz-question"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 16 Apr 2024 09:34:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz Question and Answer updated successfully\",\n    \"data\": {\n        \"question\": \"primitive Data type in java?\",\n        \"type\": {\n            \"id\": 1\n        },\n        \"userQuiz\": {\n            \"id\": 1,\n            \"players\": 0,\n            \"time\": 0,\n            \"code\": 0,\n            \"performancePercentage\": 0\n        },\n        \"correct\": true,\n        \"noAnswer\": false,\n        \"points\": 50,\n        \"timeTaken\": 10,\n        \"userQuizAnswers\": [\n            {\n                \"questionOption\": \"int\",\n                \"selectedOption\": 1,\n                \"optionSequence\": 1\n            },\n            {\n                \"questionOption\": \"string\",\n                \"selectedOption\": 2,\n                \"optionSequence\": 2\n            },\n            {\n                \"questionOption\": \"boolean\",\n                \"selectedOption\": 3,\n                \"optionSequence\": 3\n            },\n            {\n                \"questionOption\": \"All\",\n                \"selectedOption\": 4,\n                \"optionSequence\": 4\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/quiz-question/type/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz-question",
+										"type",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete by id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz-question/14",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz-question",
+												"14"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 06:55:37 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz Question and Answer delete successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"john@example.com\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"P@ssw0rd1\", \r\n    \"active\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"user_john\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"P@ssw0rd1\", \r\n    \"active\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 04 Apr 2024 11:02:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User saved successfully\",\n    \"data\": {\n        \"username\": \"user_john\",\n        \"email\": \"john@example.com\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 1,\r\n    \"username\": \"john_006\",\r\n    \"email\": \"John_08@gmial.com\",\r\n    \"password\": \"P@ssw0rd05\"\r\n}\t",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": 1,\r\n    \"username\": \"Jenish_001\",\r\n    \"email\": \"jenish_029@gmial.com\",\r\n    \"password\": \"P@ssw0rd129\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 16 Apr 2024 06:29:40 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User updated Successfully\",\n    \"data\": {\n        \"username\": \"Jenish_001\",\n        \"email\": \"jenish_029@gmial.com\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 04:31:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User found successfully\",\n    \"data\": [\n        {\n            \"username\": \"User_007\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_001\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_002\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_003\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_004\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_005\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_006\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_008\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_009\",\n            \"email\": \"user1@example.com\"\n        },\n        {\n            \"username\": \"User_010\",\n            \"email\": \"user1@example.com\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get User By ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/25",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"25"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/25",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"25"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 05:52:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User found successfully\",\n    \"data\": {\n        \"username\": \"User_004\",\n        \"email\": \"user1@example.com\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By User Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/username/Krupalee@123.com",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"username",
+										"Krupalee@123.com"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/username/Krupalee@123.com",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"username",
+												"Krupalee@123.com"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Disposition",
+											"value": "inline;filename=f.txt"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 30 May 2024 10:20:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User found successfully\",\n    \"data\": {\n        \"id\": 3\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Successfully",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 10 May 2024 05:49:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User deleted successfully\"\n}"
+								},
+								{
+									"name": "Deleting ID while having dependency",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 10 May 2024 06:05:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1302,\n    \"resultMessage\": \"Error Occur\",\n    \"data\": \"User cannot be deleted due to existing dependency in Quiz.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PATCH",
+					"item": [
+						{
+							"name": "UpdatebyId",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTY5NzkwMjcsImV4cCI6MTcxNjk3OTIwN30.jPKcNORXCssD0YgRc5f-rKM9NHh0cEjvn3fh5rgpb_o",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"P@ssw0fhjgj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdatebyId",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"P@ssw0fhjgj\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 30 May 2024 08:50:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User updated successfully\",\n    \"data\": {\n        \"username\": \"Krupalee_Suriya\",\n        \"email\": \"Krupalee@1.com\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Leaderboard",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add Leaderboard",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"id\":3,\r\n    \"userQuiz\":{\r\n        \"id\":1\r\n    },\r\n    \"player\":{\r\n        \"id\":2\r\n    },\r\n    \"points\" : 1999\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/leaderboard",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"leaderboard"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\r\n    \"id\":3,\r\n    \"userQuiz\":{\r\n        \"id\":1\r\n    },\r\n    \"player\":{\r\n        \"id\":2\r\n    },\r\n    \"points\" : 1999\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/leaderboard",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"leaderboard"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:34:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Leaderboard saved successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"userQuiz\": {\n            \"id\": 1,\n            \"name\": \"Art Quiz\",\n            \"quiz\": {\n                \"id\": 1,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"players\": 10,\n            \"time\": 50,\n            \"code\": 716068,\n            \"performancePercentage\": 100\n        },\n        \"player\": {\n            \"id\": 2,\n            \"name\": \"Kevin\"\n        },\n        \"points\": 1999\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Put Leaderboard",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"id\":3,\r\n    \"userQuiz\":{\r\n        \"id\":1\r\n    },\r\n    \"player\":{\r\n        \"id\":2\r\n    },\r\n    \"points\" : 2014\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/leaderboard",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"leaderboard"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\r\n    \"id\":3,\r\n    \"userQuiz\":{\r\n        \"id\":1\r\n    },\r\n    \"player\":{\r\n        \"id\":2\r\n    },\r\n    \"points\" : 2014\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/leaderboard",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"leaderboard"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:35:40 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Leaderboard updated successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"userQuiz\": {\n            \"id\": 1,\n            \"name\": \"Art Quiz\",\n            \"quiz\": {\n                \"id\": 1,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"players\": 10,\n            \"time\": 50,\n            \"code\": 716068,\n            \"performancePercentage\": 100\n        },\n        \"player\": {\n            \"id\": 2,\n            \"name\": \"Kevin\"\n        },\n        \"points\": 2014\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get Leaderboard all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/leaderboard",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"leaderboard"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/leaderboard",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"leaderboard"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:36:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Leaderboard found successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"userQuiz\": {\n                \"id\": 1,\n                \"name\": \"Art Quiz\",\n                \"quiz\": {\n                    \"id\": 1,\n                    \"name\": \"Java Quiz\",\n                    \"description\": \"A quiz about Java fundamentals.\",\n                    \"coverImage\": \"java.png\",\n                    \"language\": \"English\",\n                    \"status\": \"draft\",\n                    \"type\": {\n                        \"id\": 1,\n                        \"name\": \"General Knowledge Quiz\"\n                    },\n                    \"user\": {\n                        \"id\": 1,\n                        \"username\": \"user_john\",\n                        \"email\": \"john@example.com\",\n                        \"active\": true\n                    },\n                    \"deleted\": false\n                },\n                \"players\": 10,\n                \"time\": 50,\n                \"code\": 716068,\n                \"performancePercentage\": 100\n            },\n            \"player\": {\n                \"id\": 2,\n                \"name\": \"Kevin\"\n            },\n            \"points\": 1699\n        },\n        {\n            \"id\": 2,\n            \"userQuiz\": {\n                \"id\": 1,\n                \"name\": \"Art Quiz\",\n                \"quiz\": {\n                    \"id\": 1,\n                    \"name\": \"Java Quiz\",\n                    \"description\": \"A quiz about Java fundamentals.\",\n                    \"coverImage\": \"java.png\",\n                    \"language\": \"English\",\n                    \"status\": \"draft\",\n                    \"type\": {\n                        \"id\": 1,\n                        \"name\": \"General Knowledge Quiz\"\n                    },\n                    \"user\": {\n                        \"id\": 1,\n                        \"username\": \"user_john\",\n                        \"email\": \"john@example.com\",\n                        \"active\": true\n                    },\n                    \"deleted\": false\n                },\n                \"players\": 10,\n                \"time\": 50,\n                \"code\": 716068,\n                \"performancePercentage\": 100\n            },\n            \"player\": {\n                \"id\": 2,\n                \"name\": \"Kevin\"\n            },\n            \"points\": 1999\n        },\n        {\n            \"id\": 3,\n            \"userQuiz\": {\n                \"id\": 1,\n                \"name\": \"Art Quiz\",\n                \"quiz\": {\n                    \"id\": 1,\n                    \"name\": \"Java Quiz\",\n                    \"description\": \"A quiz about Java fundamentals.\",\n                    \"coverImage\": \"java.png\",\n                    \"language\": \"English\",\n                    \"status\": \"draft\",\n                    \"type\": {\n                        \"id\": 1,\n                        \"name\": \"General Knowledge Quiz\"\n                    },\n                    \"user\": {\n                        \"id\": 1,\n                        \"username\": \"user_john\",\n                        \"email\": \"john@example.com\",\n                        \"active\": true\n                    },\n                    \"deleted\": false\n                },\n                \"players\": 10,\n                \"time\": 50,\n                \"code\": 716068,\n                \"performancePercentage\": 100\n            },\n            \"player\": {\n                \"id\": 2,\n                \"name\": \"Kevin\"\n            },\n            \"points\": 2014\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Leaderboard by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/leaderboard/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"leaderboard",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/leaderboard/2",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"leaderboard",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:37:02 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Leaderboard found successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"userQuiz\": {\n            \"id\": 1,\n            \"name\": \"Art Quiz\",\n            \"quiz\": {\n                \"id\": 1,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"players\": 10,\n            \"time\": 50,\n            \"code\": 716068,\n            \"performancePercentage\": 100\n        },\n        \"player\": {\n            \"id\": 2,\n            \"name\": \"Kevin\"\n        },\n        \"points\": 1999\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete Leaderboard by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/leaderboard/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"leaderboard",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/leaderboard/4",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"leaderboard",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 07:25:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Leaderboard deleted successfully.\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AnswerOption",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add AnswerOption",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"true-false\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questiontype",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questiontype"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Blanks\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questiontype",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questiontype"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 09:22:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuestionType saved successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"Blanks\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All QuestionType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questiontype",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questiontype"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questiontype",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questiontype"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 09:22:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuestionTypes found successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"one ome one\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"hih9987i\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"true-false\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"TRUE-FALSE\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Blanks\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get QuestionType by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questiontype/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questiontype",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questiontype/4",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questiontype",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 09:23:36 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuestionType found successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"TRUE-FALSE\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Put QuestionType",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4,\r\n    \"name\":\"TRUE-FALSE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questiontype",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questiontype"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"Multi choice\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questiontype",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questiontype"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 09:25:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuestionType updated successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"TRUE-FALSE\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete QuestionType by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questiontype/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questiontype",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questiontype/8",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questiontype",
+												"8"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 07:15:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuestionType deleted successfully.\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add Quiz",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Java Quiz\",\r\n    \"description\": \"This is java quiz\",\r\n    \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\r\n    \"status\" : \"created\",\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"collection\": {\r\n        \"id\": 1\r\n    },\r\n    \"points\": {\r\n        \"id\": 1\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Java Quiz\",\r\n    \"description\": \"This is java quiz\",\r\n    \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\r\n    \"language\": \"English\",\r\n    \"status\": \"Created\",\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"type\": {\r\n        \"id\": 1\r\n    },\r\n    \"collection\": {\r\n        \"id\": 1\r\n    },\r\n    \"points\": {\r\n        \"id\": 1\r\n    }\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Jun 2024 05:08:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz saved successfully\",\n    \"data\": {\n        \"name\": \"Java Quiz\",\n        \"description\": \"This is java quiz\",\n        \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n        \"language\": \"English\",\n        \"status\": \"Created\",\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"Krupalee@123.com\",\n            \"email\": \"Krupalee@123.com\",\n            \"active\": true\n        },\n        \"type\": {\n            \"id\": 1\n        },\n        \"collection\": {\n            \"id\": 1,\n            \"name\": \"SQL\"\n        },\n        \"points\": {\n            \"id\": 1,\n            \"name\": \"no points\",\n            \"description\": \"user doesn't choose any option\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get quiz by userId & status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\" : 1,\r\n    \"status\" : \"Created\",\r\n    \"pageNo\" : 0,\r\n    \"pageSize\" : 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\" : 1,\r\n    \"status\" : \"Created\",\r\n    \"pageNo\" : 0,\r\n    \"pageSize\" : 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 10 Jun 2024 09:47:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz found successfully\",\n    \"data\": {\n        \"pageNo\": 0,\n        \"pageSize\": 5,\n        \"totalQuizzes\": 5,\n        \"quizzes\": [\n            {\n                \"name\": \"English Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 7\n            },\n            {\n                \"name\": \"React Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 6\n            },\n            {\n                \"name\": \"Python Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 5\n            },\n            {\n                \"name\": \"PHP Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 4\n            },\n            {\n                \"name\": \"Java Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 3\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Search Quiz by name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page\": 0,\r\n    \"pageSize\": 10,\r\n    \"name\": \"\",\r\n    \"userId\":2,\r\n    \"filterType\": \"quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/dashboard/filter",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"dashboard",
+										"filter"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Search Quiz by name with pagination",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"page\": 0,\r\n    \"offset\": 5,\r\n    \"name\": \"quiz\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz/search",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"search"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Jun 2024 18:05:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz's Found successfully.\",\n    \"data\": {\n        \"page\": 0,\n        \"size\": 5,\n        \"totalElements\": 5,\n        \"quizzes\": [\n            {\n                \"name\": \"Java 21 Quiz\",\n                \"description\": \"This is java quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"language\": \"English\",\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"john@example.com\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz \"\n                },\n                \"collection\": {\n                    \"id\": 1,\n                    \"name\": \"JAVA\"\n                },\n                \"points\": {\n                    \"id\": 1,\n                    \"name\": \"no points\",\n                    \"description\": \"user doesn't choose any option\"\n                }\n            },\n            {\n                \"name\": \"Java 8 Quiz\",\n                \"description\": \"This is java quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"language\": \"English\",\n                \"user\": {\n                    \"id\": 3,\n                    \"username\": \"john2@example.com\",\n                    \"email\": \"john2@example.com\",\n                    \"active\": true\n                },\n                \"type\": {\n                    \"id\": 3,\n                    \"name\": \"General Knowledge Quiz 2\"\n                },\n                \"collection\": {\n                    \"id\": 3,\n                    \"name\": \"JAVA 8\"\n                },\n                \"points\": {\n                    \"id\": 3,\n                    \"name\": \"double points\",\n                    \"description\": \"user doesn't choose any option\"\n                }\n            },\n            {\n                \"name\": \"Java Quiz\",\n                \"description\": \"This is java quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"language\": \"English\",\n                \"user\": {\n                    \"id\": 2,\n                    \"username\": \"john1@example.com\",\n                    \"email\": \"john1@example.com\",\n                    \"active\": true\n                },\n                \"type\": {\n                    \"id\": 2,\n                    \"name\": \"General Knowledge Quiz 1\"\n                },\n                \"collection\": {\n                    \"id\": 2,\n                    \"name\": \"JAVA\"\n                },\n                \"points\": {\n                    \"id\": 2,\n                    \"name\": \"single points\",\n                    \"description\": \"user doesn't choose any option\"\n                }\n            },\n            {\n                \"name\": \"JavaScript Quiz\",\n                \"description\": \"This is java quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"language\": \"English\",\n                \"user\": {\n                    \"id\": 5,\n                    \"username\": \"john4@example.com\",\n                    \"email\": \"john4@example.com\",\n                    \"active\": true\n                },\n                \"type\": {\n                    \"id\": 5,\n                    \"name\": \"Javascript quizes level 2\"\n                },\n                \"collection\": {\n                    \"id\": 5,\n                    \"name\": \"JavaScript\"\n                },\n                \"points\": {\n                    \"id\": 5,\n                    \"name\": \"tripple points\",\n                    \"description\": \"user doesn't choose any option\"\n                }\n            },\n            {\n                \"name\": \"React Quiz\",\n                \"description\": \"This is java quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"language\": \"English\",\n                \"user\": {\n                    \"id\": 4,\n                    \"username\": \"john3@example.com\",\n                    \"email\": \"john3@example.com\",\n                    \"active\": true\n                },\n                \"type\": {\n                    \"id\": 4,\n                    \"name\": \"Javascript quizes level 1\"\n                },\n                \"collection\": {\n                    \"id\": 4,\n                    \"name\": \"JavaScript\"\n                },\n                \"points\": {\n                    \"id\": 4,\n                    \"name\": \"standards points\",\n                    \"description\": \"user doesn't choose any option\"\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Quiz By User & Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pageNo\": 0,\r\n  \"pageSize\": 5,\r\n  \"collectionId\": 1,\r\n  \"userId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz/getQuizByCollectionAndUser",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"getQuizByCollectionAndUser"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Quiz By User & Collection",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"page\": 0,\r\n  \"pageSize\": 1,\r\n  \"collectionId\": 1,\r\n  \"userId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz/getQuizByCollectionAndUser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"getQuizByCollectionAndUser"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 10 Jun 2024 11:10:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz found successfully\",\n    \"data\": {\n        \"pageNo\": 0,\n        \"pageSize\": 1,\n        \"totalQuizzes\": 1,\n        \"quizzes\": [\n            {\n                \"name\": \"Java 17 Quiz\",\n                \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n                \"status\": \"Created\",\n                \"id\": 1\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get Quiz",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": [
+								{
+									"name": "Get Quiz",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"name": "Content-Type",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/quiz/98",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"98"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 11 Apr 2024 10:50:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz found successfully.\",\n    \"data\": {\n        \"name\": \"Java Quiz\",\n        \"description\": \"A quiz about Java fundamentals.\",\n        \"coverImage\": \"java.png\",\n        \"language\": \"English\",\n        \"type\": {\n            \"id\": 12,\n            \"name\": \"type3\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Get all Quiz",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 11 Apr 2024 10:51:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz found successfully.\",\n    \"data\": [\n        {\n            \"name\": \"Java Quiz\",\n            \"description\": \"A quiz about Java fundamentals.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"English\",\n            \"type\": {\n                \"id\": 12,\n                \"name\": \"type3\"\n            }\n        },\n        {\n            \"name\": \"Java Quiz 1\",\n            \"description\": \"A quiz about Java fundamentals.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"English\",\n            \"type\": {\n                \"id\": 11,\n                \"name\": \"type2\"\n            }\n        },\n        {\n            \"name\": \"Java Quiz 2\",\n            \"description\": \"A quiz about Java fundamentals.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"English\",\n            \"type\": {\n                \"id\": 10,\n                \"name\": \"type1\"\n            }\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "update Quiz",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"Update Quiz\",\r\n    \"description\": \"This is java quiz\",\r\n    \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\r\n    \"language\": \"Hindi\",\r\n    \"status\": \"Created\",\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"type\": {\r\n        \"id\": 1\r\n    },\r\n    \"collection\": {\r\n        \"id\": 1\r\n    },\r\n    \"points\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"Update Quiz\",\r\n    \"description\": \"This is java quiz\",\r\n    \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\r\n    \"language\": \"Hindi\",\r\n    \"status\": \"Created\",\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"type\": {\r\n        \"id\": 1\r\n    },\r\n    \"collection\": {\r\n        \"id\": 1\r\n    },\r\n    \"points\": {\r\n        \"id\": 1\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Jun 2024 05:10:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz updated successfully\",\n    \"data\": {\n        \"name\": \"Update Quiz\",\n        \"description\": \"This is java quiz\",\n        \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n        \"language\": \"Hindi\",\n        \"status\": \"Created\",\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"Krupalee@123.com\",\n            \"email\": \"Krupalee@123.com\",\n            \"active\": true\n        },\n        \"type\": {\n            \"id\": 1\n        },\n        \"collection\": {\n            \"id\": 1,\n            \"name\": \"SQL\"\n        },\n        \"points\": {\n            \"id\": 1,\n            \"name\": \"no points\",\n            \"description\": \"user doesn't choose any option\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Get All Points",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/quiz/28",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"28"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete by Id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/quiz/30",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"30"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 06:09:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Quiz deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "UserQuiz",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add UserQuiz",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Art Quiz\",\r\n  \"time\": 50,\r\n  \"quiz\":{\r\n    \"id\":1\r\n  },\r\n  \"performancePercentage\":100,\r\n  \"players\":10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Art Quiz\",\r\n  \"time\": 50,\r\n  \"quiz\":{\r\n    \"id\":1\r\n  },\r\n  \"performancePercentage\":100,\r\n  \"players\":10\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 09 Apr 2024 09:33:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz saved successfully\",\n    \"data\": {\n        \"name\": \"Art Quiz\",\n        \"quiz\": {\n            \"id\": 1,\n            \"deleted\": false\n        },\n        \"players\": 10,\n        \"time\": 50,\n        \"performancePercentage\": 100,\n        \"code\": 528793\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update User Quiz",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":32,\r\n    \"name\": \"Java game\",\r\n    \"time\":80.60,\r\n    \"players\":15,\r\n     \"quiz\":{\r\n    \"id\":1\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":32,\r\n    \"name\": \"Java game\",\r\n    \"time\":80.60,\r\n    \"players\":15,\r\n     \"quiz\":{\r\n    \"id\":1\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/user/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 24 Apr 2024 08:46:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz updated successfully\",\n    \"data\": {\n        \"name\": \"Java game2\",\n        \"quiz\": {\n            \"id\": 1,\n            \"name\": \"qqqq\",\n            \"description\": \"A quiz about Java fundamentals.A quiz about Java fundamentals.A quiz about Java fundamentals.A qui.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"\",\n            \"status\": \"draft\",\n            \"type\": {\n                \"id\": 10,\n                \"name\": \"wsfwef\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"fgdrg\",\n                \"email\": \"ans@gmail.com\",\n                \"active\": false\n            },\n            \"deleted\": false\n        },\n        \"players\": 15,\n        \"time\": 80,\n        \"performancePercentage\": 50,\n        \"code\": 123456\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/quiz/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz/24",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz",
+												"24"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 10:03:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User quiz found successfully\",\n    \"data\": {\n        \"name\": \"Art Quiz\",\n        \"quiz\": {\n            \"id\": 1,\n            \"name\": \"qqqq\",\n            \"description\": \"A quiz about Java fundamentals.A quiz about Java fundamentals.A quiz about Java fundamentals.A qui.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"\",\n            \"status\": \"draft\",\n            \"type\": {\n                \"id\": 10,\n                \"name\": \"wsfwef\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"fgdrg\",\n                \"email\": \"ans@gmail.com\",\n                \"password\": \"dsefeW1@\",\n                \"active\": false\n            },\n            \"deleted\": false\n        },\n        \"players\": 0,\n        \"time\": 50,\n        \"performancePercentage\": 0,\n        \"code\": 164372\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Apr 2024 10:04:12 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User quiz found successfully\",\n    \"data\": [\n        {\n            \"name\": \"Art Quiz\",\n            \"quiz\": {\n                \"id\": 1,\n                \"name\": \"qqqq\",\n                \"description\": \"A quiz about Java fundamentals.A quiz about Java fundamentals.A quiz about Java fundamentals.A qui.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 10,\n                    \"name\": \"wsfwef\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"fgdrg\",\n                    \"email\": \"ans@gmail.com\",\n                    \"password\": \"dsefeW1@\",\n                    \"active\": false\n                },\n                \"deleted\": false\n            },\n            \"players\": 0,\n            \"time\": 50,\n            \"performancePercentage\": 0,\n            \"code\": 164372\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/quiz/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"quiz",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/user/quiz/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"user",
+												"quiz",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 May 2024 09:51:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"User Quiz deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "QuizType",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All QuizType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/quiz/types",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"types"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All QuizType",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"name": "Content-Type",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/quiz/types",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"types"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:21:03 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuizType found successfully\",\n    \"data\": [\n        {\n            \"name\": \"paskal\"\n        },\n        {\n            \"name\": \"Alpha\"\n        },\n        {\n            \"name\": \"gaama\"\n        },\n        {\n            \"name\": \"theta\"\n        },\n        {\n            \"name\": \"Goverence  quiz\"\n        },\n        {\n            \"name\": \"General Knowledge Quiz\"\n        },\n        {\n            \"name\": \"Sciece Quiz\"\n        },\n        {\n            \"name\": \"music quiz\"\n        },\n        {\n            \"name\": \"Social Science Quiz\"\n        },\n        {\n            \"name\": \"Sciece Quiz\"\n        },\n        {\n            \"name\": \" Knowledge Quiz\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get QuizType ById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/quiz/types/31",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"types",
+										"31"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get QuizType ById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"name": "Content-Type",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/quiz/types/29",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"types",
+												"29"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:20:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuizType found successfully\",\n    \"data\": {\n        \"name\": \"music quiz\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add QuizType",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"General Knowledge Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz/types",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"types"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \" Knowledge Quiz\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz/types",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"types"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:17:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuizType saved successfully\",\n    \"data\": {\n        \"name\": \" Knowledge Quiz\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update Quiztype  byId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"29\",\r\n    \"name\":\"music test quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/quiz/types",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"types"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Quiztype  byId",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"29\",\r\n    \"name\":\"music test quiz\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/quiz/types",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"types"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 07:22:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuizType updated successfully\",\n    \"data\": {\n        \"name\": \"music test quiz\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete QuizType",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/quiz/types/37",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"quiz",
+										"types",
+										"37"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Quiztype ById",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/quiz/types/37",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"quiz",
+												"types",
+												"37"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 12:52:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"QuizType deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pointsconfig",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All Points",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/points",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"points"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Points",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/points",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"points"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 09:47:12 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Points found successfully\",\n    \"data\": [\n        {\n            \"name\": \"No points\",\n            \"description\": \"user doesn't choose any option\"\n        },\n        {\n            \"name\": \"Double points\",\n            \"description\": \"user give answer Quikly\"\n        },\n        {\n            \"name\": \"minus points\",\n            \"description\": \"user give wrong answer\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Points By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/points/20",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"points",
+										"20"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Points By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/points/20",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"points",
+												"20"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 09:47:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Points found successfully\",\n    \"data\": {\n        \"name\": \"Double points\",\n        \"description\": \"user give answer Quikly\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add PointsConfig",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"no points\",\r\n    \"description\" : \"user doesn't choose any option\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/points",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"points"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"no points\",\r\n    \"description\" : \"user doesn't choose any option\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/points",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"points"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 09:48:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Points saved successfully\",\n    \"data\": {\n        \"name\": \"no points\",\n        \"description\": \"user doesn't choose any option\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update Pointconfig ById",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"27\",\r\n    \"name\": \"Zero points\",\r\n    \"description\" : \"user doesn't choose any option\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/points",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"points"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Pointconfig ById",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"27\",\r\n    \"name\": \"Zero points\",\r\n    \"description\" : \"user doesn't choose any option\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/points",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"points"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 25 Apr 2024 09:50:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Points updated successfully\",\n    \"data\": {\n        \"name\": \"Zero points\",\n        \"description\": \"user doesn't choose any option\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete Points",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/points/28",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"points",
+										"28"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Points Deletd ById",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/points/28",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"points",
+												"28"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 29 Apr 2024 13:40:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Points deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Question & QuestionAnswers Copy",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Add Question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"question\": \"What is the capital of India?\",\r\n  \"timeLimit\": 10,\r\n    \"type\":{\r\n        \"id\":1\r\n    },\r\n    \"quiz\":{\r\n        \"id\":1\r\n    },\r\n  \"questionAnswers\": [\r\n    {\r\n      \"questionOption\": \"Delhi\",\r\n      \"correct\": true\r\n    },\r\n    {\r\n      \"questionOption\": \"Mumbai\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n      \"questionOption\": \"Kolkata\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n      \"questionOption\": \"Goa\",\r\n      \"correct\": false\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questions",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"question\": \"What is the capital of India?\",\r\n  \"timeLimit\": 10,\r\n    \"type\":{\r\n        \"id\":1\r\n    },\r\n    \"quiz\":{\r\n        \"id\":1\r\n    },\r\n  \"questionAnswers\": [\r\n    {\r\n      \"questionOption\": \"Delhi\",\r\n      \"correct\": true\r\n    },\r\n    {\r\n      \"questionOption\": \"Mumbai\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n      \"questionOption\": \"Kolkata\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n      \"questionOption\": \"Goa\",\r\n      \"correct\": false\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questions",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 10:53:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Question and QuestionAnswers saved successfully\",\n    \"data\": {\n        \"question\": \"What is the capital of India?\",\n        \"timeLimit\": 10,\n        \"points\": 1000,\n        \"type\": {\n            \"id\": 1,\n            \"name\": \"true-false\"\n        },\n        \"quiz\": {\n            \"id\": 1,\n            \"name\": \"Java 17 Quiz\",\n            \"description\": \"This is java feature 17 quiz\",\n            \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n            \"language\": \"English\",\n            \"status\": \"Created\",\n            \"points\": {\n                \"id\": 1,\n                \"name\": \"no points\",\n                \"description\": \"user doesn't choose any option\"\n            },\n            \"collection\": {\n                \"id\": 1,\n                \"name\": \"JAVA\"\n            },\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"General Knowledge Quiz\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"karan@gamil.com\",\n                \"email\": \"karan@gamil.com\",\n                \"active\": true\n            },\n            \"deleted\": false\n        },\n        \"questionAnswers\": [\n            {\n                \"questionOption\": \"Delhi\",\n                \"correct\": true\n            },\n            {\n                \"questionOption\": \"Mumbai\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Kolkata\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Goa\",\n                \"correct\": false\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get All Questions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questions",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questions",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Apr 2024 07:47:22 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Questions found successfully\",\n    \"data\": [\n        {\n            \"question\": \"What is the capital of India?\",\n            \"timeLimit\": 10,\n            \"points\": 5,\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"true-false\"\n            },\n            \"quiz\": {\n                \"id\": 3,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"Delhi\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"Mumbai\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Kolkata\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Goa\",\n                    \"correct\": false\n                }\n            ]\n        },\n        {\n            \"question\": \"What is the capital of Italy?\",\n            \"timeLimit\": 10,\n            \"points\": 5,\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"true-false\"\n            },\n            \"quiz\": {\n                \"id\": 3,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"Rome\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"Milan\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Venice\",\n                    \"correct\": false\n                }\n            ]\n        },\n        {\n            \"question\": \"What is the capital of Japan?\",\n            \"timeLimit\": 10,\n            \"points\": 5,\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"true-false\"\n            },\n            \"quiz\": {\n                \"id\": 3,\n                \"name\": \"Java Quiz\",\n                \"description\": \"A quiz about Java fundamentals.\",\n                \"coverImage\": \"java.png\",\n                \"language\": \"English\",\n                \"status\": \"draft\",\n                \"type\": {\n                    \"id\": 1,\n                    \"name\": \"General Knowledge Quiz\"\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"username\": \"user_john\",\n                    \"email\": \"john@example.com\",\n                    \"active\": true\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"Tokyo\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"Beijing\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Seoul\",\n                    \"correct\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Question By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questions/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questions/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Apr 2024 07:48:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Question found successfully\",\n    \"data\": {\n        \"question\": \"What is the capital of India?\",\n        \"timeLimit\": 10,\n        \"points\": 5,\n        \"type\": {\n            \"id\": 1,\n            \"name\": \"true-false\"\n        },\n        \"quiz\": {\n            \"id\": 3,\n            \"name\": \"Java Quiz\",\n            \"description\": \"A quiz about Java fundamentals.\",\n            \"coverImage\": \"java.png\",\n            \"language\": \"English\",\n            \"status\": \"draft\",\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"General Knowledge Quiz\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"user_john\",\n                \"email\": \"john@example.com\",\n                \"active\": true\n            },\n            \"deleted\": false\n        },\n        \"questionAnswers\": [\n            {\n                \"questionOption\": \"Delhi\",\n                \"correct\": true\n            },\n            {\n                \"questionOption\": \"Mumbai\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Kolkata\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Goa\",\n                \"correct\": false\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By Quiz Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quizId\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questions/quiz",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions",
+										"quiz"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quizId\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questions/quiz",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions",
+												"quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 12 Jun 2024 09:49:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Questions and QuestionAnswers found successfully\",\n    \"data\": [\n        {\n            \"question\": \"What is the capital of India?\",\n            \"timeLimit\": 10,\n            \"points\": 0,\n            \"type\": {\n                \"id\": 1\n            },\n            \"quiz\": {\n                \"id\": 1,\n                \"collection\": {\n                    \"id\": 1\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"active\": false\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"Delhi\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"Mumbai\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Kolkata\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"Goa\",\n                    \"correct\": false\n                }\n            ]\n        },\n        {\n            \"question\": \"question 2\",\n            \"timeLimit\": 10,\n            \"points\": 0,\n            \"type\": {\n                \"id\": 1\n            },\n            \"quiz\": {\n                \"id\": 1,\n                \"collection\": {\n                    \"id\": 1\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"active\": false\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"option 1\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"option 2\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"option 3\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"option 4\",\n                    \"correct\": false\n                }\n            ]\n        },\n        {\n            \"question\": \"question 3\",\n            \"timeLimit\": 10,\n            \"points\": 0,\n            \"type\": {\n                \"id\": 1\n            },\n            \"quiz\": {\n                \"id\": 1,\n                \"collection\": {\n                    \"id\": 1\n                },\n                \"user\": {\n                    \"id\": 1,\n                    \"active\": false\n                },\n                \"deleted\": false\n            },\n            \"questionAnswers\": [\n                {\n                    \"questionOption\": \"option 1\",\n                    \"correct\": true\n                },\n                {\n                    \"questionOption\": \"option 2\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"option 3\",\n                    \"correct\": false\n                },\n                {\n                    \"questionOption\": \"option 4\",\n                    \"correct\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By Quiz Id with Pagination",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page\":1,\r\n    \"pageSize\":1,\r\n    \"quizId\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questions/preview",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions",
+										"preview"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"page\":1,\r\n    \"pageSize\":1,\r\n    \"quizId\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questions/preview",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions",
+												"preview"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 12 Jun 2024 11:58:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Questions and QuestionAnswers found successfully\",\n    \"data\": {\n        \"page\": 1,\n        \"pageSize\": 1,\n        \"totalElements\": 3,\n        \"content\": [\n            {\n                \"question\": \"question 2\",\n                \"timeLimit\": 10,\n                \"points\": 0,\n                \"type\": {\n                    \"id\": 1\n                },\n                \"quiz\": {\n                    \"id\": 1,\n                    \"collection\": {\n                        \"id\": 1\n                    },\n                    \"user\": {\n                        \"id\": 1,\n                        \"active\": false\n                    },\n                    \"deleted\": false\n                },\n                \"questionAnswers\": [\n                    {\n                        \"questionOption\": \"option 1\",\n                        \"correct\": true\n                    },\n                    {\n                        \"questionOption\": \"option 2\",\n                        \"correct\": false\n                    },\n                    {\n                        \"questionOption\": \"option 3\",\n                        \"correct\": false\n                    },\n                    {\n                        \"questionOption\": \"option 4\",\n                        \"correct\": false\n                    }\n                ]\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update Question",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n  \"question\": \"What is the capital of Japan?\",\r\n  \"timeLimit\": 20,\r\n    \"type\":{\r\n        \"id\":1\r\n    },\r\n    \"quiz\":{\r\n        \"id\":1\r\n    },\r\n  \"questionAnswers\": [\r\n    {\r\n        \"id\":9,\r\n      \"questionOption\": \"Tokyo\",\r\n      \"correct\": true\r\n    },\r\n    {\r\n        \"id\":10,\r\n      \"questionOption\": \"Osaka\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n        \"id\":11,\r\n      \"questionOption\": \"Kyoto\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n        \"id\":12,\r\n      \"questionOption\": \"Kobe\",\r\n      \"correct\": false\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/questions",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":1,\r\n  \"question\": \"What is the capital of Japan?\",\r\n  \"timeLimit\": 20,\r\n    \"type\":{\r\n        \"id\":1\r\n    },\r\n    \"quiz\":{\r\n        \"id\":1\r\n    },\r\n  \"questionAnswers\": [\r\n    {\r\n        \"id\":9,\r\n      \"questionOption\": \"Tokyo\",\r\n      \"correct\": true\r\n    },\r\n    {\r\n        \"id\":10,\r\n      \"questionOption\": \"Osaka\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n        \"id\":11,\r\n      \"questionOption\": \"Kyoto\",\r\n      \"correct\": false\r\n    },\r\n    {\r\n        \"id\":12,\r\n      \"questionOption\": \"Kobe\",\r\n      \"correct\": false\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/questions",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 12:37:56 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Question and QuestionAnswers updated successfully\",\n    \"data\": {\n        \"question\": \"What is the capital of Japan?\",\n        \"timeLimit\": 20,\n        \"points\": 1000,\n        \"type\": {\n            \"id\": 1,\n            \"name\": \"true-false\"\n        },\n        \"quiz\": {\n            \"id\": 1,\n            \"name\": \"Java 17 Quiz\",\n            \"description\": \"This is java feature 17 quiz\",\n            \"coverImage\": \"https://example.com/sample_cover_image.jpg\",\n            \"language\": \"English\",\n            \"status\": \"Created\",\n            \"points\": {\n                \"id\": 1,\n                \"name\": \"no points\",\n                \"description\": \"user doesn't choose any option\"\n            },\n            \"collection\": {\n                \"id\": 1,\n                \"name\": \"JAVA\"\n            },\n            \"type\": {\n                \"id\": 1,\n                \"name\": \"General Knowledge Quiz\"\n            },\n            \"user\": {\n                \"id\": 1,\n                \"username\": \"karan@gamil.com\",\n                \"email\": \"karan@gamil.com\",\n                \"active\": true\n            },\n            \"deleted\": false\n        },\n        \"questionAnswers\": [\n            {\n                \"questionOption\": \"Tokyo\",\n                \"correct\": true\n            },\n            {\n                \"questionOption\": \"Osaka\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Kyoto\",\n                \"correct\": false\n            },\n            {\n                \"questionOption\": \"Kobe\",\n                \"correct\": false\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete Question By ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/questions/17",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"questions",
+										"17"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200-Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/questions/17",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"questions",
+												"17"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 May 2024 06:41:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Question and QuestionAnswers deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OTP Verification",
+			"item": [
+				{
+					"name": "OTP-verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTY4OTgxOTgsImV4cCI6MTcxNjg5ODM3OH0.1I6eaG9_IgmVR36y00rHGTLKRXIL1KO9xWPlyTF99dk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Krupalee_Suriya\",\r\n    \"otp\": 123456,\r\n    \"expirationTime\": \"2024-05-28T20:58:30.7316157\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/otp/verify",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"otp",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTY4OTgxOTgsImV4cCI6MTcxNjg5ODM3OH0.1I6eaG9_IgmVR36y00rHGTLKRXIL1KO9xWPlyTF99dk",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":5,\r\n    \"otp\": \"123456\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auth/otp/verify",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"verify"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 May 2024 07:09:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"OTP verified Successfully.\"\n}"
+						},
+						{
+							"name": "Varify Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLcnVwYWxlZV9TdXJpeWEiLCJpYXQiOjE3MTY4OTgxOTgsImV4cCI6MTcxNjg5ODM3OH0.1I6eaG9_IgmVR36y00rHGTLKRXIL1KO9xWPlyTF99dk",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"otp\": \"123456\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auth/otp/verify",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"verify"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 May 2024 07:10:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resultCode\": 1501,\n    \"resultMessage\": \"Error Occur\",\n    \"data\": \"OTP verified failed.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Otp Generation",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Otp generate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/otp/generate/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"generate",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 - Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/otp/generate/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"otp",
+												"generate",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 May 2024 10:43:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resultCode\": 1001,\n    \"resultMessage\": \"Otp generated successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"otp\": \"987626\",\n        \"expirationTime\": \"2024-05-29T16:18:47.9627393\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Authentication",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"harshil@gamil.com\",\n    \"email\": \"harshil@gamil.com\",\n    \"password\": \"Password@123\", \n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/volisi/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"volisi",
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"if (response.data && response.data.token) {\r",
+									"    const bearerToken = `Bearer ${response.data.token}`;\r",
+									"    pm.environment.set(\"token\", bearerToken);\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"harshil+02@gamil.com\",\n    \"password\": \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/volisi/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"volisi",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5pc2hfcGF0ZWwiLCJpYXQiOjE3MTY4MDk5NTYsImV4cCI6MTcxNjgxMDEzNn0.G2k0d1ubmkA0zcURpYqruDAroyENAvbxZDRGc_faDNQ"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/volisi/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"volisi",
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
